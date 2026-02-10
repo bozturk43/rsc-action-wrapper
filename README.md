@@ -106,6 +106,9 @@ Every action returns a consistent object that is easy to handle on the frontend:
 data?: T; // Your returned data on success
 error?: string; // Generic server errors (from try-catch)
 validationErrors?: Record<string, string[]>; // Zod validation errors
+metadata?: {
+    duration: number; // Execution time in milliseconds
+  };
 }
 
 ```
